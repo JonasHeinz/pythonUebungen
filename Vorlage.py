@@ -2,10 +2,10 @@ import sys
 from PyQt5.QtWidgets import * 
 from PyQt5.QtCore import *
  
-# Fenster-Klasse: wird von QWindow vererbt 
+
 class MyWindow(QMainWindow): 
-    def __init__(self):      # Konstruktor 
-        super().__init__()   # Konstruktor Basis-Klasse 
+    def __init__(self):     
+        super().__init__() 
     
         layout = QFormLayout()
 
@@ -13,13 +13,13 @@ class MyWindow(QMainWindow):
         center.setLayout(layout)
         self.setCentralWidget(center) 
         
-        self.setWindowTitle("Hello World")  # Fenster-Titel setzen 
-        self.show()  # Fenster anzeigen/sichtbar machen 
+        self.setWindowTitle("Hello World")   
+        self.show()  
 
  
 def main(): 
-    app = QApplication(sys.argv)  # Qt Applikation erstellen 
-    mainwindow = MyWindow()       # Instanz Fenster erstellen 
+    app = QApplication(sys.argv) 
+    mainwindow = MyWindow()       
     app.exec()  
     
 if __name__ == '__main__': 
